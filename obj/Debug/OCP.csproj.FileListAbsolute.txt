@@ -1,0 +1,7 @@
+D:\Дима проекты\iJunior\Напильник\OCP\bin\Debug\OCP.exe.config
+D:\Дима проекты\iJunior\Напильник\OCP\bin\Debug\OCP.exe
+D:\Дима проекты\iJunior\Напильник\OCP\bin\Debug\OCP.pdb
+D:\Дима проекты\iJunior\Напильник\OCP\obj\Debug\OCP.csproj.AssemblyReference.cache
+D:\Дима проекты\iJunior\Напильник\OCP\obj\Debug\OCP.csproj.CoreCompileInputs.cache
+D:\Дима проекты\iJunior\Напильник\OCP\obj\Debug\OCP.exe
+D:\Дима проекты\iJunior\Напильник\OCP\obj\Debug\OCP.pdb
