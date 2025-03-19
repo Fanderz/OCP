@@ -11,7 +11,7 @@ namespace OCP
 
             var systemId = orderForm.ChooseSystem(provider.FabricIds);
 
-            if (systemId <= 0 || Enum.IsDefined(typeof(PaymentSystemTypes), systemId) == false)
+            if (Enum.IsDefined(typeof(PaymentSystemTypes), (PaymentSystemTypes)Convert.ToInt32(systemId)) == false)
             {
                 Console.WriteLine("Такой системы нет.");
                 Console.ReadKey();
