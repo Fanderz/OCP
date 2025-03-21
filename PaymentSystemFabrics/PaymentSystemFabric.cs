@@ -2,6 +2,6 @@
 {
     abstract class PaymentSystemFabric
     {
-        public abstract PaymentSystem Create();
+        public abstract IPaymentSystem Create();
     }
 }

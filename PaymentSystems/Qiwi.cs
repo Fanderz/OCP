@@ -2,11 +2,13 @@
 
 namespace OCP
 {
-    class Qiwi : PaymentSystem
+    class Qiwi : IPaymentSystem
     {
-        public Qiwi(PaymentSystemTypes system) : base(system)
+        public Qiwi()
         {
-            Console.WriteLine($"Перевод на страницу {system}...");
+            Console.WriteLine($"Перевод на страницу {System}...");
         }
+
+        public PaymentSystemTypes System => PaymentSystemTypes.QIWI;
     }
 }

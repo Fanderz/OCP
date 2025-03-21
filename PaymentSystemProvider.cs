@@ -1,4 +1,5 @@
 ﻿using OCP.PaymentSystemFabrics;
+using System;
 using System.Collections.Generic;
 
 namespace OCP
@@ -11,9 +12,9 @@ namespace OCP
         {
             _fabrics = new Dictionary<string, PaymentSystemFabric>();
 
-            _fabrics.Add("1", new QiwiPaymentFabric());
-            _fabrics.Add("2", new WebMoneyPaymentFabric());
-            _fabrics.Add("3", new CardPaymentFabric());
+            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.QIWI)}", new QiwiPaymentFabric());
+            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.WebMoney)}", new WebMoneyPaymentFabric());
+            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.Card)}", new CardPaymentFabric());
         }
 
         public IEnumerable<string> FabricIds => _fabrics.Keys;

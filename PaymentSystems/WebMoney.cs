@@ -2,11 +2,13 @@
 
 namespace OCP
 {
-    class WebMoney : PaymentSystem
+    class WebMoney : IPaymentSystem
     {
-        public WebMoney(PaymentSystemTypes system) : base(system)
+        public WebMoney()
         {
-            Console.WriteLine($"Вызов API {system}...");
+            Console.WriteLine($"Вызов API {System}...");
         }
+
+        public PaymentSystemTypes System => PaymentSystemTypes.WebMoney;
     }
 }

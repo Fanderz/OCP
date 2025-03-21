@@ -8,9 +8,9 @@ namespace OCP.PaymentSystemFabrics
 {
     class CardPaymentFabric : PaymentSystemFabric
     {
-        public override PaymentSystem Create()
+        public override IPaymentSystem Create()
         {
-            return new Card(PaymentSystemTypes.Card);
+            return new Card();
         }
     }
 }

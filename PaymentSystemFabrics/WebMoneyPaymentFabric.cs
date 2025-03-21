@@ -8,9 +8,9 @@ namespace OCP.PaymentSystemFabrics
 {
     class WebMoneyPaymentFabric : PaymentSystemFabric
     {
-        public override PaymentSystem Create()
+        public override IPaymentSystem Create()
         {
-            return new WebMoney(PaymentSystemTypes.WebMoney);
+            return new WebMoney();
         }
     }
 }

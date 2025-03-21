@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PaymentHandler.cs" />
     <Compile Include="PaymentSystemFabrics\CardPaymentFabric.cs" />
     <Compile Include="PaymentSystemFabrics\PaymentSystemFabric.cs" />
     <Compile Include="PaymentSystemFabrics\QiwiPaymentFabric.cs" />
@@ -50,7 +51,7 @@
     <Compile Include="PaymentSystemProvider.cs" />
     <Compile Include="PaymentSystems\Card.cs" />
     <Compile Include="OrderForm.cs" />
-    <Compile Include="PaymentSystems\PaymentSystem.cs" />
+    <Compile Include="PaymentSystems\IPaymentSystem.cs" />
     <Compile Include="PaymentSystemTypes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

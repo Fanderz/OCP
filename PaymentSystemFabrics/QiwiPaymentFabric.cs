@@ -2,9 +2,9 @@
 {
     class QiwiPaymentFabric : PaymentSystemFabric
     {
-        public override PaymentSystem Create()
+        public override IPaymentSystem Create()
         {
-            return new Qiwi(PaymentSystemTypes.QIWI);
+            return new Qiwi();
         }
     }
 }

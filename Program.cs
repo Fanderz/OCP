@@ -8,8 +8,9 @@ namespace OCP
         {
             PaymentSystemProvider provider = new PaymentSystemProvider();
             OrderForm orderForm = new OrderForm();
+            
 
-            var systemId = orderForm.ChooseSystem(provider.FabricIds);
+            string systemId = orderForm.ChooseSystem(provider.FabricIds);
 
             if (Enum.IsDefined(typeof(PaymentSystemTypes), (PaymentSystemTypes)Convert.ToInt32(systemId)) == false)
             {
@@ -18,7 +19,8 @@ namespace OCP
                 return;
             }
 
-            provider.GetPaymentSystemFabric(systemId).Create().ShowPaymentResult();
+            PaymentHandler handler = new PaymentHandler(provider.GetPaymentSystemFabric(systemId).Create());
+            handler.ShowPaymentResult();
             Console.ReadKey();
         }
     }

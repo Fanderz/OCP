@@ -2,11 +2,13 @@
 
 namespace OCP
 {
-    class Card : PaymentSystem
+    class Card : IPaymentSystem
     {
-        public Card(PaymentSystemTypes system) : base(system)
+        public Card()
         {
-            Console.WriteLine($"Вызов API банка эмитера карты {system}...");
+            Console.WriteLine($"Вызов API банка эмитера карты {System}...");
         }
+
+        public PaymentSystemTypes System { get => PaymentSystemTypes.Card; }
     }
 }

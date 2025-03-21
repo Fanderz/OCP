@@ -10,7 +10,7 @@ namespace OCP
 
             Console.WriteLine($"Мы принимаем: ");
 
-            foreach (var item in fabricsIds)
+            foreach (string item in fabricsIds)
                 Console.WriteLine($"{item} - {(PaymentSystemTypes)Convert.ToInt32(item)}");
 
             //симуляция веб интерфейса
