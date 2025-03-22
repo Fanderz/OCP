@@ -1,10 +1,10 @@
 ﻿namespace OCP.PaymentSystemFabrics
 {
-    class QiwiPaymentFabric : PaymentSystemFabric
+    class CardPaymentFactory : PaymentSystemFactory
     {
         public override IPaymentSystem Create()
         {
-            return new Qiwi();
+            return new Card();
         }
     }
 }

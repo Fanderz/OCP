@@ -1,6 +1,6 @@
 ﻿namespace OCP.PaymentSystemFabrics
 {
-    abstract class PaymentSystemFabric
+    abstract class PaymentSystemFactory
     {
         public abstract IPaymentSystem Create();
     }

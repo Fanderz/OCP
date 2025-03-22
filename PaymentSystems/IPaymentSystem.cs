@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OCP
+﻿namespace OCP
 {
     interface IPaymentSystem
     {

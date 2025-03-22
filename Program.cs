@@ -8,7 +8,6 @@ namespace OCP
         {
             PaymentSystemProvider provider = new PaymentSystemProvider();
             OrderForm orderForm = new OrderForm();
-            
 
             string systemId = orderForm.ChooseSystem(provider.FabricIds);
 
@@ -19,7 +18,7 @@ namespace OCP
                 return;
             }
 
-            PaymentHandler handler = new PaymentHandler(provider.GetPaymentSystemFabric(systemId).Create());
+            PaymentHandler handler = new PaymentHandler(provider.GetPaymentSystemFabric(systemId));
             handler.ShowPaymentResult();
             Console.ReadKey();
         }

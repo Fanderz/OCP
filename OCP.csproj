@@ -44,10 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PaymentHandler.cs" />
-    <Compile Include="PaymentSystemFabrics\CardPaymentFabric.cs" />
-    <Compile Include="PaymentSystemFabrics\PaymentSystemFabric.cs" />
-    <Compile Include="PaymentSystemFabrics\QiwiPaymentFabric.cs" />
-    <Compile Include="PaymentSystemFabrics\WebMoneyPaymentFabric.cs" />
+    <Compile Include="PaymentSystemFabrics\CardPaymentFactory.cs" />
+    <Compile Include="PaymentSystemFabrics\PaymentSystemFactory.cs" />
+    <Compile Include="PaymentSystemFabrics\QiwiPaymentFactory.cs" />
+    <Compile Include="PaymentSystemFabrics\WebMoneyPaymentFactory.cs" />
     <Compile Include="PaymentSystemProvider.cs" />
     <Compile Include="PaymentSystems\Card.cs" />
     <Compile Include="OrderForm.cs" />

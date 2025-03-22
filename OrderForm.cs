@@ -7,7 +7,6 @@ namespace OCP
     {
         public string ChooseSystem(IEnumerable<string> fabricsIds)
         {
-
             Console.WriteLine($"Мы принимаем: ");
 
             foreach (string item in fabricsIds)

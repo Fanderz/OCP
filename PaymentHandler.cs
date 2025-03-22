@@ -5,11 +5,11 @@ namespace OCP
 {
     class PaymentHandler
     {
-        private IPaymentSystem _system;
+        private readonly IPaymentSystem _system;
 
-        public PaymentHandler(IPaymentSystem system)
+        public PaymentHandler(PaymentSystemFactory factory)
         {
-            _system = system;
+            _system = factory.Create();
         }
 
         public void ShowPaymentResult()

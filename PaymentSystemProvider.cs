@@ -1,25 +1,25 @@
-﻿using OCP.PaymentSystemFabrics;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using OCP.PaymentSystemFabrics;
 
 namespace OCP
 {
     class PaymentSystemProvider
     {
-        private Dictionary<string, PaymentSystemFabric> _fabrics;
+        private readonly Dictionary<string, PaymentSystemFactory> _fabrics;
 
         public PaymentSystemProvider()
         {
-            _fabrics = new Dictionary<string, PaymentSystemFabric>();
+            _fabrics = new Dictionary<string, PaymentSystemFactory>();
 
-            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.QIWI)}", new QiwiPaymentFabric());
-            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.WebMoney)}", new WebMoneyPaymentFabric());
-            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.Card)}", new CardPaymentFabric());
+            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.QIWI)}", new QiwiPaymentFactory());
+            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.WebMoney)}", new WebMoneyPaymentFactory());
+            _fabrics.Add($"{Convert.ToInt32(PaymentSystemTypes.Card)}", new CardPaymentFactory());
         }
 
         public IEnumerable<string> FabricIds => _fabrics.Keys;
 
-        public PaymentSystemFabric GetPaymentSystemFabric(string systemId)
+        public PaymentSystemFactory GetPaymentSystemFabric(string systemId)
         {
             return _fabrics[systemId];
         }
